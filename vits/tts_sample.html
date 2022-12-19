@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.box {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.box_n{
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+td{
+	text-align: center
+}
+</style>
+
+<script>
+function nahida(){
+	var p1 = document.getElementById('nahida');
+	p1.style.backgroundColor = 'yellow';
+	var p2 = document.getElementById('nilou');
+	p2.style.backgroundColor = 'white';
+	
+	var p3 = document.getElementById('nahida_voice');
+	p3.style.display = 'block';
+	var p4 = document.getElementById('nilou_voice');
+	p4.style.display = 'none';
+}
+function nilou(){
+	var p1 = document.getElementById('nahida');
+	p1.style.backgroundColor = 'white';
+	var p2 = document.getElementById('nilou');
+	p2.style.backgroundColor = 'yellow';
+	
+	var p3 = document.getElementById('nahida_voice');
+	p3.style.display = 'none';
+	var p4 = document.getElementById('nilou_voice');
+	p4.style.display = 'block';
+}
+</script>
+
+</head>
+<body>
+
+<h2>캐릭터 선택</h2> <hr>
+
+<div>
+	<table>
+		<tr>
+			<td>
+				<div id="nahida" class="box" style="background-color:yellow"onclick='nahida()'>
+				<img class="profile" src="img/nahida.png">
+				</div>
+			</td>
+			<td>
+				<div id="nilou" class="box" onclick='nilou()'>
+				<img class="profile" src="img/nilou.png">
+				</div>
+			</td>
+			<td>
+				<div id="ganyu" class="box_n">
+				<img class="profile" src="img/ganyu.png" style="filter: grayscale(100%);">
+				</div>
+			</td>
+			<td>
+				<div id="kokomi" class="box_n">
+				<img class="profile" src="img/kokomi.png" style="filter: grayscale(100%);">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<text style="font-weight:bold;">나히다 (Nahida)</text>
+			</td>
+			<td>
+				<text style="font-weight:bold;">닐루 (Nilou)</text>
+			</td>
+			<td>
+				<text style="font-weight:bold;">감우 (Ganyu)</text>
+			</td>
+			<td>
+				<text style="font-weight:bold;">코코미 (Kokomi)</text>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id='nahida_voice' style='display:block'>
+	<div><h4>나히다 (Nahida) <br> #Epoch6062 <br> #Number of voices used for learning:856</h4></div> <hr>
+	<div id="voice01">
+		<text>이 모든 구성이 단 삼만구천구백원, 파격적인 혜택에 사은품까지 같이 드리니까요, 얼른 전화주세요.</text><br>
+		<audio controls>
+			<source src="./wavs/nahida01.wav" type="audio/wav">
+		</audio>
+	</div>
+	<div id="voice02">
+		<text>송크란 페스티벌은 타이의 전통 새해가 시작되는 것을 기념해 열리는, 타이에서 가장 규모가 크고 중요한 축제다.</text><br>
+		<audio controls>
+			<source src="./wavs/nahida02.wav" type="audio/wav">
+		</audio>
+	</div>
+	<div id="voice03">
+		<text>레오나르도 다빈치의 걸작, 모나리자는 세계에서 가장 유명한 초상화 중 하나이지만, 언제, 누구를 모델로 하여 그려진 것인지에 대해서는 정확하게 알려진 바가 없다.</text><br>
+		<audio controls>
+			<source src="./wavs/nahida03.wav" type="audio/wav">
+		</audio>
+	</div>
+</div>
+
+<div id='nilou_voice' style='display:none'>
+	<div><h4>닐루 (Nilou) <br> #Epoch5866 <br> #Number of voices used for learning:424</h4></div> <hr>
+	<div id="voice01">
+		<text>이 모든 구성이 단 삼만구천구백원, 파격적인 혜택에 사은품까지 같이 드리니까요, 얼른 전화주세요.</text><br>
+		<audio controls>
+			<source src="./wavs/nilou01.wav" type="audio/wav">
+		</audio>
+	</div>
+	<div id="voice02">
+		<text>송크란 페스티벌은 타이의 전통 새해가 시작되는 것을 기념해 열리는, 타이에서 가장 규모가 크고 중요한 축제다.</text><br>
+		<audio controls>
+			<source src="./wavs/nilou02.wav" type="audio/wav">
+		</audio>
+	</div>
+	<div id="voice03">
+		<text>레오나르도 다빈치의 걸작, 모나리자는 세계에서 가장 유명한 초상화 중 하나이지만, 언제, 누구를 모델로 하여 그려진 것인지에 대해서는 정확하게 알려진 바가 없다.</text><br>
+		<audio controls>
+			<source src="./wavs/nilou03.wav" type="audio/wav">
+		</audio>
+	</div>
+</div>
+</body>
+</html>
