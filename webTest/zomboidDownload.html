@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.box {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.box_n{
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+td{
+	text-align: center
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'myFont';
+}
+
+.back01{
+	width: 100%;
+	height: 1000px;
+	background-image : url("needfiles/back.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.back02{
+	width: 1280px;
+	height: 100%;
+	background-color: rgba(255,255,255,1);
+	margin: auto;
+}
+.foot01{
+	width: 100%;
+	background-color: #8C8C8C;
+}
+
+#nahida_voice div{
+	margin-bottom: 20px;
+}
+#nilou_voice div{
+	margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("needfiles/font.ttf") format("truetype");
+  font-weight: normal;
+}
+
+</style>
+
+<script>
+</script>
+
+</head>
+<body>
+<div class="header" style="position:relative; background-color:#000; height:100px; width:100%; min-width:1280px;">
+	<div>
+		<div style="position:absolute; text-align:center; color:#fff; font-size: 30px; width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
+			<div style="display:flex; align-items: center; cursor: pointer;" onclick="alert('좀보이드 세이브파일 다운로드');">
+				<img src="needfiles/icon.png" style="height:100px;"></img>
+				<text>좀보이드 세이브 파일 다운로드</text>
+			</div>
+		</div>
+		<div onclick="location.href='https://store.steampowered.com/app/108600/Project_Zomboid/'" style="position:absolute; cursor: pointer; background-color:#5D5D5D; color:#fff; height: 100%; width: 200px; display:flex; align-items: center; justify-content: center;">
+			<p style="font-size:15px;">스팀 홈페이지 바로가기</p>
+		</div>
+		<div onclick="location.href='https://namu.wiki/w/Project%20Zomboid'" style="position:absolute; left:100%; transform: translate(-100%, 0%); cursor: pointer; background-color:#008275; color:#fff; height: 100%; width: 200px; display:flex; align-items: center; justify-content: center;">
+			<p style="font-size:15px;">나무위키 바로가기</p>
+		</div>
+	</div>
+</div>
+<div class="back01">
+	<div class="back02">
+		<h2 style="margin: 0; padding: 20px;"># 서버 설정 파일</h2> <hr style="border: dashed 1px blue;">
+		<div style="display:flex; align-items: center; background-color: orange; margin-left:50px; margin-bottom:30px; width:40%; border-radius: 30px; justify-content: center; cursor: pointer;" onclick="location.href='https://drive.google.com/file/d/1xCuculqOjZWZwgeY7FnKLHyO_Y78-yA_/view?usp=share_link'">
+			<p style="font-size:30px;"> # 22년 12월 31일 설정파일</p>
+			<img style="width:60px; height:60px; padding-left:30px;"src="needfiles/down.png"></img>
+		</div>
+		<h2 style="margin: 0; padding: 20px;"># 세이브 파일</h2> <hr style="border: dashed 1px blue;">
+		<div>
+			<div style="display:flex; align-items: center; background-color: orange; margin-left:50px; margin-bottom:30px; width:40%; border-radius: 30px; justify-content: center; cursor: pointer;" onclick="location.href='https://drive.google.com/file/d/1Tah8-M3pwSyM6I5ylKhQxD7okMIqrlbw/view?usp=share_link'">
+				<p style="font-size:30px;"> # 22년 12월 31일 세이브파일</p>
+				<img style="width:60px; height:60px; padding-left:30px;"src="needfiles/down.png"></img>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="foot01" style="height:300px;">
+	<div style="width:1280px; margin: auto; background-color: #8C8C8C;">
+		<div style="display:flex; align-items: center; justify-content: center; margin:0; height: 50px;">
+			<p style="font-size:24px;">참조 사이트</p>
+		</div>
+		<hr>
+		<div style="display:flex; align-items: center; justify-content: center; cursor: pointer; margin-bottom:20px;" onclick="location.href='https://steamcommunity.com/app/108600/workshop/'">
+			<img src="needfiles/steam.png" style="width:60px;height:60px;"></img>
+			<p style="font-size:20px; margin-left:20px;">좀보이드 스팀 창작마당</p>
+		</div>
+		<div style="display:flex; align-items: center; justify-content: center; cursor: pointer; margin-bottom:20px;" onclick="location.href='https://gall.dcinside.com/mgallery/board/lists/?id=pzom'">
+			<img src="needfiles/dcinside.png" style="width:60px;height:60px;"></img>
+			<p style="font-size:20px; margin-left:20px;">좀보이드 갤러리</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
