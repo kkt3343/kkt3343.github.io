@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.box {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.box_n{
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+td{
+	text-align: center
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.back01{
+	width: 100%;
+	height: 800px;
+	background-color: #EAEAEA;
+}
+.foot01{
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	border-width: 3px 0px 0px 0px ;
+	border-color: #EAEAEA;
+    border-style: solid;
+}
+
+#nahida_voice div, #nilou_voice div, #zhongli_voice div, #paimon_voice div, #ganyu_voice div{
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1280px) {
+	.back02{
+		width: 800px;
+		height: 100%;
+		background-color: #fff;
+		margin: auto;
+	}
+	#table01{
+		display: none;
+	}
+	#table02{
+		display: table;
+	}
+}
+  @media screen and (min-width: 1280px) {
+	.back02{
+		width: 1280px;
+		height: 100%;
+		background-color: #fff;
+		margin: auto;
+	}
+	#table01{
+		display: table;
+	}
+	#table02{
+		display: none;
+	}
+}
+
+</style>
+
+<script>
+var character = new Array();
+var characterVoice = new Array();
+window.onload = function(){
+	character[0] = document.getElementById('nahida');
+	character[1] = document.getElementById('nilou');
+	character[2] = document.getElementById('zhongli');
+	character[3] = document.getElementById('paimon');
+	character[4] = document.getElementById('ganyu');
+
+	characterVoice[0] = document.getElementById('nahida_voice');
+	characterVoice[1] = document.getElementById('nilou_voice');
+	characterVoice[2] = document.getElementById('zhongli_voice');
+	characterVoice[3] = document.getElementById('paimon_voice');
+	characterVoice[4] = document.getElementById('ganyu_voice');
+
+}
+function pick(number){
+	for(var i = 0; i< character.length; i++){
+		if (i == number){
+			character[i].style.backgroundColor = 'yellow';
+			characterVoice[i].style.display = 'block';
+		}
+		else{
+			character[i].style.backgroundColor = 'white';
+			characterVoice[i].style.display = 'none';
+		}
+	}
+}
+</script>
+
+</head>
+<body>
+<div class="header" style="position:relative; background-color:#A6A6A6; height:40px; width:100%; min-width:800px;">
+	<div>
+		<div style="position:absolute; text-align:center; color:#fff; font-size: 20px; width:100%; height:100%; display:flex; align-items: center; justify-content: center;">
+			<text style="cursor: pointer;" onclick="alert('TTS샘플페이지입니다.');">학습 음성 샘플</text>
+		</div>
+		<div onclick="location.href='https://github.com/kkt3343'" style="position:absolute; cursor: pointer; background-color:#5D5D5D; color:#fff; margin: 0; height: 100%; width: 150px; display:flex; align-items: center; justify-content: center;">
+			<p>홈페이지 바로가기</p>
+		</div>
+	</div>
+</div>
+<div class="back01" style="height: 1200px;">
+	<div class="back02">
+		<h2 style="text-align:center; margin: 0; padding: 20px;">캐릭터 선택</h2> <hr>
+		<div>
+			<table id="table01" style="margin-left:auto; margin-right:auto;">
+				<tr>
+					<td>
+						<div id="nahida" class="box" style="background-color:yellow" onclick='pick("0")'>
+						<img class="profile" src="img/nahida.png">
+						</div>
+					</td>
+					<td>
+						<div id="nilou" class="box" onclick='pick("1")'>
+						<img class="profile" src="img/nilou.png">
+						</div>
+					</td>
+					<td>
+						<div id="zhongli" class="box" onclick='pick("2")'>
+						<img class="profile" src="img/zhongli.png">
+						</div>
+					</td>
+					<td>
+						<div id="paimon" class="box" onclick='pick("3")'>
+						<img class="profile" src="img/paimon.webp">
+						</div>
+					</td>
+					<td>
+						<div id="ganyu" class="box" onclick='pick("4")'>
+						<img class="profile" src="img/ganyu.png">
+						</div>
+					</td>
+					<td>
+						<div id="kokomi" class="box_n">
+						<img class="profile" src="img/kokomi.png" style="filter: grayscale(100%);">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<text style="font-weight:bold;">나히다 (Nahida)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">닐루 (Nilou)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">종려 (Zhongli)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">페이몬 (Paimon)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">감우 (Ganyu)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">코코미 (Kokomi)</text>
+					</td>
+				</tr>
+			</table>
+			<table id="table02" style="margin-left:auto; margin-right:auto;">
+				<tr>
+					<td>
+						<div id="nahida" class="box" style="background-color:yellow" onclick='pick("0")'>
+						<img class="profile" src="img/nahida.png">
+						</div>
+					</td>
+					<td>
+						<div id="nilou" class="box" onclick='pick("1")'>
+						<img class="profile" src="img/nilou.png">
+						</div>
+					</td>
+					<td>
+						<div id="zhongli" class="box" onclick='pick("2")'>
+						<img class="profile" src="img/zhongli.png">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<text style="font-weight:bold;">나히다 (Nahida)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">닐루 (Nilou)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">종려 (Zhongli)</text>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="paimon" class="box" onclick='pick("3")'>
+						<img class="profile" src="img/paimon.webp">
+						</div>
+					</td>
+					<td>
+						<div id="ganyu" class="box" onclick='pick("4")'>
+						<img class="profile" src="img/ganyu.png">
+						</div>
+					</td>
+					<td>
+						<div id="kokomi" class="box_n">
+						<img class="profile" src="img/kokomi.png" style="filter: grayscale(100%);">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<text style="font-weight:bold;">페이몬 (Paimon)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">감우 (Ganyu)</text>
+					</td>
+					<td>
+						<text style="font-weight:bold;">코코미 (Kokomi)</text>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id='nahida_voice' style='display:block; margin:20px;'>
+			<div><h4>나히다 (Nahida) <br> #Epoch6062 <br> #Number of voices used for learning:856</h4></div> <hr>
+			<div id="voice01">
+				<text>이 모든 구성이 단 삼만구천구백원, 파격적인 혜택에 사은품까지 같이 드리니까요, 얼른 전화주세요.</text><br>
+				<audio controls>
+					<source src="./wavs/nahida01.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice02">
+				<text>송크란 페스티벌은 타이의 전통 새해가 시작되는 것을 기념해 열리는, 타이에서 가장 규모가 크고 중요한 축제다.</text><br>
+				<audio controls>
+					<source src="./wavs/nahida02.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice03">
+				<text>레오나르도 다빈치의 걸작, 모나리자는 세계에서 가장 유명한 초상화 중 하나이지만, 언제, 누구를 모델로 하여 그려진 것인지에 대해서는 정확하게 알려진 바가 없다.</text><br>
+				<audio controls>
+					<source src="./wavs/nahida03.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice04">
+				<text>유미는 밴들 시티 출신의 마법 고양이로 한때 요들 마법사 노라와 함께 살았다. <br> 어느 날 노라가 알 수 없는 이유로 종적을 감추자 유미는 자아를 지닌 노라의 책 '관문의 서'의 수호자가 되었으며, 책 페이지 안에 존재하는 차원문을 타고 주인을 찾는 여정에 나섰다.</text><br>
+				<audio controls>
+					<source src="./wavs/nahida04.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice05">
+				<text>고양이가 아닌 시바견의 인형옷을 입은 채로 출시되었으며 귀환시 뼈다귀가 나오자 질색하더니 끈에 묶인 물고기가 하늘에서 내려오자 이에 홀린 듯 덥석 물며 하늘로 올라간다. <br>
+					기존 유미의 컨셉과 잘 어울리는데다 처음으로 고양이가 아닌 강아지의 컨셉으로 출시되다보니 큰 인기를 얻고있다.</text><br>
+				<audio controls>
+					<source src="./wavs/nahida05.wav" type="audio/wav">
+				</audio>
+			</div>
+		</div>
+
+		<div id='nilou_voice' style='display:none; margin:20px;'>
+			<div><h4>닐루 (Nilou) <br> #Epoch5866 <br> #Number of voices used for learning:424</h4></div> <hr>
+			<div id="voice01">
+				<text>이 모든 구성이 단 삼만구천구백원, 파격적인 혜택에 사은품까지 같이 드리니까요, 얼른 전화주세요.</text><br>
+				<audio controls>
+					<source src="./wavs/nilou01.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice02">
+				<text>송크란 페스티벌은 타이의 전통 새해가 시작되는 것을 기념해 열리는, 타이에서 가장 규모가 크고 중요한 축제다.</text><br>
+				<audio controls>
+					<source src="./wavs/nilou02.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice03">
+				<text>레오나르도 다빈치의 걸작, 모나리자는 세계에서 가장 유명한 초상화 중 하나이지만, 언제, 누구를 모델로 하여 그려진 것인지에 대해서는 정확하게 알려진 바가 없다.</text><br>
+				<audio controls>
+					<source src="./wavs/nilou03.wav" type="audio/wav">
+				</audio>
+			</div>
+		</div>
+
+		<div id='zhongli_voice' style='display:none; margin:20px;'>
+			<div><h4>종려 (Zhongli) <br> #Epoch5433 <br> #Number of voices used for learning:681</h4></div> <hr>
+			<div id="voice01">
+				<text>자기소개 부탁드립니다.</text><br>
+				<audio controls>
+					<source src="./wavs/zhongli01.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice02">
+				<text>안전자산인 엔화의 강세가 이어지고 있는 6일 명동 하나은행 본점 딜링룸에서 딜러들이 업무를 보고 있다.</text><br>
+				<audio controls>
+					<source src="./wavs/zhongli02.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice03">
+				<text>어디에서 영어를 배우셨어요?</text><br>
+				<audio controls>
+					<source src="./wavs/zhongli03.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice04">
+				<text>화재가 발생하지 않도록 조심해라.</text><br>
+				<audio controls>
+					<source src="./wavs/zhongli04.wav" type="audio/wav">
+				</audio>
+			</div>
+		</div>
+
+		<div id='paimon_voice' style='display:none; margin:20px;'>
+			<div><h4>페이몬 (Paimon) <br> #Epoch7101 <br> #Number of voices used for learning:1115</h4></div> <hr>
+			<div id="voice01">
+				<text>다른 언어 설정과는 다르게, 한국어 설정에서만 특이하게 페이몬으로 읽는다.</text><br>
+				<audio controls>
+					<source src="./wavs/paimon01.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice02">
+				<text>요컨대 욕심이 많지만 결코 탐욕스럽지는 않으며, 겁이 많지만 비열하지 않을 뿐더러 남들을 돕기 좋아하는 순박하고 선한 성품을 지니고 있다.</text><br>
+				<audio controls>
+					<source src="./wavs/paimon02.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice03">
+				<text>서울특별시는 대한민국의 수도이자 최대도시이다.</text><br>
+				<audio controls>
+					<source src="./wavs/paimon03.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice04">
+				<text>서울은 냉대기후, 구체적으로는 냉대동계건조기후(Dwa)로 분류된다.</text><br>
+				<audio controls>
+					<source src="./wavs/paimon04.wav" type="audio/wav">
+				</audio>
+			</div>
+		</div>
+
+		<div id='ganyu_voice' style='display:none; margin:20px;'>
+			<div><h4>감우 (Ganyu) <br> #Epoch11461 <br> #Number of voices used for learning:307</h4></div> <hr>
+			<div id="voice01">
+				<text>벚꽃은 벚나무의 꽃이다. 봄에 화창하게 피는 분홍색, 또는 하얀색 꽃잎이 일반적이다.</text><br>
+				<audio controls>
+					<source src="./wavs/ganyu01.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice02">
+				<text>일본에서 벚꽃은 많은 국민들의 기호에 따라 관습상 국화로 인정된다. 벚꽃은 일본 국내외에서 태양, 후지산 등과 함께 일본의 상징으로 취급된다.</text><br>
+				<audio controls>
+					<source src="./wavs/ganyu02.wav" type="audio/wav">
+				</audio>
+			</div>
+			<div id="voice03">
+				<text>고양이는 황혼과 장난기로 만들어졌고 개는 멍멍과 막대기로 만들어졌지! 책은 그냥 오래된 나무고.</text><br>
+				<audio controls>
+					<source src="./wavs/ganyu03.wav" type="audio/wav">
+				</audio>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="foot01">
+	<div style="width: 800px; margin: auto;">
+		<div style="display:flex; align-items: center; justify-content: center; margin:0;">
+			<p style="font-size:24px;">참조한 사이트</p>
+		</div>
+		<hr>
+		<div style="display:flex; align-items: center; justify-content: center; cursor: pointer;" onclick="location.href='https://github.com/jaywalnut310/vits'">
+			<img src="https://avatars.githubusercontent.com/u/20279210?v=4" style="width:60px;height:60px;"></img>
+			<p style="font-size:20px; margin-left:20px;">jaywalnut310</p>
+		</div>
+		<div style="display:flex; align-items: center; justify-content: center; cursor: pointer;" onclick="location.href='https://github.com/CjangCjengh/vits'">
+			<img src="https://avatars.githubusercontent.com/u/101577701?v=4" style="width:60px;height:60px;"></img>
+			<p style="font-size:20px; margin-left:20px;">CjangCjengh</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
